@@ -39,7 +39,10 @@ public class ServicioService {
 
             s.setNombre(servicio.getNombre());
             s.setDescripcion(servicio.getDescripcion());
-            s.setIcono(servicio.getIcono());
+            
+            // CORREGIDO AQUÍ: Usamos los nuevos métodos de la entidad
+            s.setImagen(servicio.getImagen()); 
+            
             s.setEstado(servicio.getEstado());
 
             return repository.save(s);
@@ -61,5 +64,4 @@ public class ServicioService {
 
         return false;
     }
-
 }

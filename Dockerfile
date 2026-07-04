@@ -1,9 +1,8 @@
-# Paso 1: Compilar la aplicación usando Gradle con Java 17
 FROM gradle:8.5-jdk17 AS build
 COPY --chown=gradle:gradle . /home/gradle/src
 WORKDIR /home/gradle/src
 
-# ¡Esta es la línea clave que añade los permisos de ejecución!
+# Esta línea debe estar aquí sí o sí
 RUN chmod +x ./gradlew
 
 RUN ./gradlew build -x test --no-daemon

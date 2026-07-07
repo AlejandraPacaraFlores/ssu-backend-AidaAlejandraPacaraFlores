@@ -16,19 +16,21 @@ public class Servicio {
     @Column(length = 5000)
     private String descripcion;
 
-    private String icono;
+    // Cambiado de icono a imagen
+    private String imagen;
 
     private Integer estado;
 
     public Servicio() {
     }
 
+    // Constructor actualizado
     public Servicio(Long id, String nombre, String descripcion,
-                    String icono, Integer estado) {
+                    String imagen, Integer estado) {
         this.id = id;
         this.nombre = nombre;
         this.descripcion = descripcion;
-        this.icono = icono;
+        this.imagen = imagen;
         this.estado = estado;
     }
 
@@ -37,7 +39,7 @@ public class Servicio {
     }
 
     public void setId(Long id) {
-        this.id=id;
+        this.id = id;
     }
 
     public String getNombre() {
@@ -45,7 +47,7 @@ public class Servicio {
     }
 
     public void setNombre(String nombre) {
-        this.nombre=nombre;
+        this.nombre = nombre;
     }
 
     public String getDescripcion() {
@@ -53,15 +55,16 @@ public class Servicio {
     }
 
     public void setDescripcion(String descripcion) {
-        this.descripcion=descripcion;
+        this.descripcion = descripcion;
     }
 
-    public String getIcono() {
-        return icono;
+    // Getter y Setter actualizados para imagen
+    public String getImagen() {
+        return imagen;
     }
 
-    public void setIcono(String icono) {
-        this.icono=icono;
+    public void setImagen(String imagen) {
+        this.imagen = imagen;
     }
 
     public Integer getEstado() {
@@ -69,7 +72,6 @@ public class Servicio {
     }
 
     public void setEstado(Integer estado) {
-        this.estado=estado;
+        this.estado = estado;
     }
-
 }
